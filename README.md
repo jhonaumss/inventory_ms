@@ -1,0 +1,2 @@
+# SISTEMA FULL STACK BASADO EN ARQUITECTURA DE MICROSERVICIOS PARA LA GESTIÓN AUTOMATIZADA Y CENTRALIZADA DE INVENTARIOS EN MYPES
+## El presente proyecto tiene como objeto de estudio el desarrollo de un sistema Full Stack orientado a una ERP modular para la administración y automatización de inventarios en MYPES, implementado bajo una arquitectura de microservicios.
