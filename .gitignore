@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---- Java / Spring Boot ----
+/inventory-backend/target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# Logs
+*.log
+
+# Maven wrapper
+/inventory-backend/.mvn/
+!/inventory-backend/.mvn/wrapper/maven-wrapper.jar
+
+# ---- Node / React ----
+/inventory-frontend/node_modules/
+/inventory-frontend/dist/
+/inventory-frontend/.vite/
+
+# Env files (secrets, API keys)
+*.env
+*.env.local
+
+# ---- IDEs & Editors ----
+.idea/
+.vscode/
+*.swp
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
