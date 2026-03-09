@@ -42,36 +42,41 @@ Autenticación y gestión de usuarios
 6.	DELETE api/users/{id}
 7.	PUT api/users/{id}/change-password
 Gestion de productos
-1.	GET api/products
-2.	GET api/ products /{id}
-3.	POST api/ products
-4.	PUT api/ products /{id}
-5.	DELETE api/ products /{id}
-6.	POST api/ products
-7.	POST api/movements
+1.	GET api/inventory/products
+2.	GET api/inventory/products /{id}
+3.	POST api/inventory/products
+4.	PUT api/inventory/products /{id}
+5.	DELETE api/inventory/products /{id}
+6.	POST api/inventory/products
+7.	POST api/inventory/movements
 Gestion de notificaciones
-1.	GET api/notifications
-2.	GET api/notifications/unread-count
-3.	POST api/notifications/mark-all-read
+1.	GET api/notifications/{userid}
+2.	GET api/notifications/{userid}/unread-count
+3.	POST api/notifications/{userid}/mark-all-read
 4.	DELETE api/notifications/{id}
 5.	POST api/notifications/generate-notifications
 ## Cómo ejecutar el proyecto (local)
     Clonar el repositorio 
     git clone https://github.com/jhonaumss/inventory_ms.git
+    
     Ejecucion Backend
+    
     Setear los variables de entorno
     Orden de ejecución de servicios Backend
-    •	Ejecutar el servicio config-service
-    •	Ejecutar el servicio eureka-service
+    •	Ejecutar el servicio config-server
+    •	Ejecutar el servicio eureka-server
+    •	Ejecutar el servicio api-gateway
     •	Ejecutar el servicio auth-service
     •	Ejecutar el servicio inventory-service
     •	Ejecutar el servicio notification-service
+    
     Ejecución Frontend
+    
     Dirigirse a la carpeta “frontend” del proyecto
     Abrir la consola en esta ruta e ingresar los siguientes comandos
     npm install
     npm run dev
-## Variables de entorno 
+## Variables de entorno
     ${DB_HOST}
     ${DB_PORT}
     ${DB_NAME}
