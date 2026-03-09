@@ -6,6 +6,7 @@ import { setupInterceptors } from "./setupInterceptors";
 
 const api = setupInterceptors(() => {
   localStorage.removeItem("token");
+  localStorage.removeItem("userId");
   window.location.href = "/login";
 });
 

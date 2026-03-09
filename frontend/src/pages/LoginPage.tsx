@@ -30,7 +30,7 @@ function LoginPage() {
     );
 
     const { token, mustChangePassword, id } = res.data;
-    login(token);
+    login(token, id);
 
     if (mustChangePassword) {
       navigate(`/change-password/${id}`);

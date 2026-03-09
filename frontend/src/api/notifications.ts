@@ -3,21 +3,25 @@ import { setupInterceptors } from "./setupInterceptors";
 
 const api = setupInterceptors(() => {
   localStorage.removeItem("token");
+  localStorage.removeItem("userId");
   window.location.href = "/login";
 });
 
 export const fetchNotifications = async (): Promise<Notification[]> => {
-  const res = await api.get("/notifications");
+  const userId = localStorage.getItem("userId");
+  const res = await api.get(`/notifications/${userId}`);
   return res.data;
 };
 
 export const fetchUnreadCount = async (): Promise<number> => {
-  const res = await api.get("/notifications/unread-count");
+  const userId = localStorage.getItem("userId");
+  const res = await api.get(`/notifications/${userId}/unread-count`);
   return res.data;
 };
 
 export const markAllRead = async () => {
-  await api.post("/notifications/mark-all-read");
+  const userId = localStorage.getItem("userId");
+  await api.post(`/notifications/${userId}/mark-all-read`);
 };
 
 export const deleteNotification = async (id: string) => {

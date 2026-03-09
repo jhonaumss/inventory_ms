@@ -8,6 +8,6 @@ spring:
     config:
       server:
         git:
-          uri: file:///${CONFIG_REPO_PATH}  # local git repo for now
+          uri: file:///${CONFIG_REPO_PATH:D:\Documents\inventory-config-repo}  # local git repo for now
           default-label: main
           clone-on-start: true

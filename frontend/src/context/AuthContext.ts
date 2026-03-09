@@ -13,7 +13,7 @@ interface AuthContextType {
   token: string | null;
   user: string | null;
   roles: string[];
-  login: (token: string) => void;
+  login: (token: string, userId: string) => void;
   logout: () => void;
   isAuthenticated: boolean;
 }
@@ -52,13 +52,15 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     }
   }, [token]);
 
-  const login = (newToken: string) => {
+  const login = (newToken: string, userId: string) => {
     localStorage.setItem("token", newToken);
+    localStorage.setItem("userId", userId);
     setToken(newToken);
   };
 
   const logout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("userId");
     setToken(null);
     setUser(null);
     setRoles([]);

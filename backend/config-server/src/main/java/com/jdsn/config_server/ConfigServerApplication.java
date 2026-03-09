@@ -2,8 +2,9 @@ package com.jdsn.config_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
-@EnableConfigService
+@EnableConfigServer
 @SpringBootApplication
 public class ConfigServerApplication {
 
